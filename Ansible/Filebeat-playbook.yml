@@ -1,7 +1,8 @@
 ---
 - name: Installing and Launch Filebeat
-  hosts: webservers
-  become: yes
+  hosts: elk
+  remote_user: azureuser
+  become: true
   tasks:
     # Use command module
   - name: Download filebeat .deb file
