@@ -1,5 +1,5 @@
 ---
-- name: Installing and Launch Filebeat
+- name: Install and Launch Filebeat
   hosts: elk
   remote_user: azureuser
   become: true
