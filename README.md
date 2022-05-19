@@ -102,9 +102,9 @@ SSH into the control node and follow the steps below:
 - Update the /etc/ansible/hosts file to include the IP address of the Elk Server VM and webservers.
 - Run the playbook, and navigate to http://[Elk_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
 - _Which file is the playbook?_ the playbook files are listed below:
- - ![ELK Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Install-ELK.yml)
- - ![Filebeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Filebeat-playbook.yml)
- - ![Metricbeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Metricbeat-playbook)
+  ![ELK Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Install-ELK.yml)
+  ![Filebeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Filebeat-playbook.yml)
+  ![Metricbeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Metricbeat-playbook)
 - _Where do you copy it?_ /etc/ansible/
 - _Which file do you update to make Ansible run the playbook on a specific machine?_ /etc/ansible/hosts.cfg
 - _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ You specify which machine to install by updating the host files with ip addresses of web/elk servers and selecting which group to run on in ansible.
