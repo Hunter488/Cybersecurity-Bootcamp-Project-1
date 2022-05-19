@@ -104,8 +104,11 @@ SSH into the control node and follow the steps below:
 - Copy the configuration file from your Ansible container to your Web VM's
 - Update the /etc/ansible/hosts file to include the IP address of the Elk Server VM and webservers.
 - Run the playbook, and navigate to http://[Elk_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
-- Which file is the playbook? 
-- Where do you copy it?_
+- Which file is the playbook? the playbook files are listed below:
+- ![ELK Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Install-ELK.yml)
+- ![Filebeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Filebeat-playbook.yml)
+- ![Metricbeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Metricbeat-playbook)
+- Where do you copy it? /etc/ansible/
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
