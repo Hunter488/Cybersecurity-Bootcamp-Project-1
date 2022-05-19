@@ -1,7 +1,6 @@
 ---
 - name: Install metric beat
   hosts: elk
-  remote_user: azureuser
   become: true
   tasks:
     # Use command module
