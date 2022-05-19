@@ -1,4 +1,4 @@
-# Cybersecurity-Bootcamp-Project-1
+# Cybersecurity Bootcamp Project 1
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -53,7 +53,7 @@ Only the jumpbox machine can accept connections from the Internet. Access to thi
 -Personal IP Address
 
 Machines within the network can only be accessed by the jumpbox provisioner.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+The Elk Machine can be accessed from a designated IP address through port 5601.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -68,13 +68,14 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because servcies running can be limited, system installation and update can be streamlined, and processes become more replicable.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+* Installs docker.io, pip3 and the docker module
+* Increases the VM memory
+* Uses sysctl module
+* Downloads and launches the docker container for the ELK Server
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -82,13 +83,19 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+
+* Web 1 (10.1.0.5)
+* Web 2 (10.1.0.6)
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+
+* Metricbeat
+* Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+* Metricbeat records metrics and statistical data from the operating system and from services running on the server
+* Filebeat is a log data shipper for local files. Installed as an agent on your servers, Filebeat monitors the log directories or specific log files, tails the files, and forwards them either to Elasticsearch or Logstash for indexing. An examle of such are the logs produced from the MySQL database supporting our application.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
