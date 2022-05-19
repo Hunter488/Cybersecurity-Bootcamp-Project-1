@@ -77,9 +77,6 @@ The playbook implements the following tasks:
 * Uses sysctl module
 * Downloads and launches the docker container for the ELK Server
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -104,12 +101,11 @@ SSH into the control node and follow the steps below:
 - Copy the configuration file from your Ansible container to your Web VM's
 - Update the /etc/ansible/hosts file to include the IP address of the Elk Server VM and webservers.
 - Run the playbook, and navigate to http://[Elk_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
-- Which file is the playbook? the playbook files are listed below:
+- _Which file is the playbook?_ the playbook files are listed below:
 - ![ELK Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Install-ELK.yml)
 - ![Filebeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Filebeat-playbook.yml)
 - ![Metricbeat Installation](https://github.com/Hunter488/Cybersecurity-Bootcamp-Project-1/blob/main/Ansible/Metricbeat-playbook)
-- Where do you copy it? /etc/ansible/
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- _Where do you copy it?_ /etc/ansible/
+- _Which file do you update to make Ansible run the playbook on a specific machine?_ /etc/ansible/hosts.cfg
+- _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ You specify which machine to install by updating the host files with ip addresses of web/elk servers and selecting which group to run on in ansible.
+- _Which URL do you navigate to in order to check that the ELK server is running?_ http://[Elk_VM_Public_IP]:5601/app/kibana
